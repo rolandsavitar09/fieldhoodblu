@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+
+  
+  background: linear-gradient(to bottom, #002A7A, #0A0F1F);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;   
+  scrollbar-width: none;      
+}
+
+
+
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+
+
+::selection {
+  background: #4C8BFF60;   
+  color: white;
+}
+
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out forwards;
+}
+
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-down {
+  animation: fade-down 0.7s ease-out forwards;
+}
